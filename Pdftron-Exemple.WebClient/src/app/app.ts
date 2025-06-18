@@ -104,6 +104,8 @@ export class App implements OnInit {
             cacheKey: "4311D348-29E4-44F1-A511-0B8808C5178E",
         };
 
+        this.setWatermark();
+
         this.loadFile(options);
     }
 
@@ -128,5 +130,17 @@ export class App implements OnInit {
             this.webViewerInstance.UI.disableFeatures([this.webViewerInstance.UI.Feature.Print]);
             this.webViewerInstance.UI.disableElements([customPrintButtonElement]);
         }
+    }
+
+    public setWatermark() {
+        this.webViewerInstance.Core.documentViewer.setWatermark({
+            diagonal: {
+                color: "#000000",
+                fontFamily: "Brush Script MT",
+                fontSize: 25,
+                opacity: 100,
+                text: userName
+            }
+        });
     }
 }
