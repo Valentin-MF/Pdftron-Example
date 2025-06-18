@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.3023946">
+	<PropertyGroup>
+		<BuildCommand>
+			<!-- Show node version to avoid default command -->
+			npm run build
+		</BuildCommand>
+		<ShouldRunNpmInstall>true</ShouldRunNpmInstall>
+		<ShouldRunBuildScript>true</ShouldRunBuildScript>
+	</PropertyGroup>
+</Project>
